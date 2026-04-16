@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,
+            //スクロール方向を逆転,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -122,8 +122,62 @@
         M01PW: M01PW {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp S &kp H &kp O &kp W &kp N2 &kp N4 &kp N5 &kp N6 &kp G &kp U &kp Y &kp ENTER>;
+            bindings = <&kp S &kp H &kp O &kp W &kp N2 &kp N4 &kp N5 &kp N6 &kp G &kp U &kp Y &kp ENTER>;
             label = "M01PW";
+        };
+
+        M02rvpn: M02rvpn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_GUI>,
+                <&macro_wait_time 800>,
+                <&kp TAB &kp TAB &kp DOWN_ARROW &kp RIGHT &kp RIGHT &kp ENTER>,
+                <&macro_wait_time 800>,
+                <&kp N1 &kp N0 &kp DOT &kp N1 &kp N8 &kp N9 &kp DOT &kp N2 &kp N1 &kp N4 &kp DOT &kp N1 &kp N5 &kp N5>,
+                <&macro_wait_time 400>,
+                <&kp LA(N)>,
+                <&macro_wait_time 1000>,
+                <&kp LA(N)>,
+                <&macro_wait_time 1000>,
+                <&kp R &kp V &kp P &kp N &kp BSLH &kp N4 &kp N0 &kp N8 &kp N0 &kp N5 &kp N5 &kp N3 &kp TAB &kp S &kp H &kp O &kp W &kp N2 &kp N4 &kp N5 &kp N6 &kp G &kp U &kp Y &kp ENTER>;
+
+            label = "M02RVPN";
+        };
+
+        M03bxo: M03bxo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LA(TAB)>,
+                <&macro_wait_time 200>,
+                <&kp LA(TAB)>,
+                <&macro_wait_time 200>,
+                <&kp B &kp X &kp O &kp BSLH &kp N4 &kp N0 &kp N8 &kp N0 &kp N5 &kp N5 &kp N3 &kp TAB &kp S &kp H &kp O &kp W &kp N2 &kp N4 &kp N5 &kp N6 &kp G &kp U &kp Y>;
+
+            label = "M03BXO";
+        };
+
+        M04sum: M04sum {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp INT_KANA &kp LANG_ZENKAKUHANKAKU &kp S &kp U &kp M &kp LPAR &kp RPAR &kp ENTER>,
+                <&macro_wait_time 200>,
+                <&kp LEFT>;
+
+            label = "M04SUM";
+        };
+
+        M05roundup: M05roundup {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp INT_KANA &kp LANG_ZENKAKUHANKAKU &kp R &kp O &kp U &kp N &kp D &kp U &kp P &kp LPAR &kp RPAR &kp ENTER>,
+                <&macro_wait_time 200>,
+                <&kp LEFT>;
+
+            label = "M05ROUNDUP";
         };
     };
 
