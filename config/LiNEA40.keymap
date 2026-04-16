@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,
+            //スクロール方向を逆転,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -66,24 +66,9 @@
     combos {
         compatible = "zmk,combos";
 
-        ZenkakuHankaku {
-            bindings = <&kp GRAVE>;
-            key-positions = <11 12>;
-        };
-
-        DeleteKey {
-            bindings = <&kp DEL>;
-            key-positions = <7 8>;
-        };
-
-        InsertKey {
-            bindings = <&kp INS>;
-            key-positions = <6 7>;
-        };
-
         CenterClick {
-            bindings = <&mkp MB3>;
-            key-positions = <17 16>;
+            bindings = <&mkp MB1>;
+            key-positions = <16 15>;
         };
 
         RightClick {
@@ -91,14 +76,59 @@
             key-positions = <18 17>;
         };
 
-        PrevClick {
-            bindings = <&mkp MB4>;
-            key-positions = <27 28>;
+        k-open01 {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <3 13>;
         };
 
-        ClickNext {
-            bindings = <&mkp MB5>;
-            key-positions = <26 27>;
+        k-close01 {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <6 16>;
+        };
+
+        k-open02 {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <13 23>;
+        };
+
+        k-close02 {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <16 26>;
+        };
+
+        l-enter {
+            bindings = <&kp ENTER>;
+            key-positions = <30 31>;
+        };
+
+        up {
+            bindings = <&kp UP_ARROW>;
+            key-positions = <27 28 29>;
+        };
+
+        down {
+            bindings = <&kp DOWN_ARROW>;
+            key-positions = <38 39 40>;
+        };
+
+        left {
+            bindings = <&kp LEFT>;
+            key-positions = <27 38>;
+        };
+
+        right {
+            bindings = <&kp RIGHT>;
+            key-positions = <29 40>;
+        };
+
+        Sedit {
+            bindings = <&MSedit>;
+            key-positions = <16 17 18 36>;
+        };
+
+        cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <6 7 8>;
         };
     };
 
@@ -119,14 +149,14 @@
     };
 
     macros {
-        M01PW: M01PW {
+        MPW: M01PW {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp S &kp H &kp O &kp W &kp N2 &kp N4 &kp N5 &kp N6 &kp G &kp U &kp Y &kp ENTER>;
             label = "M01PW";
         };
 
-        M02rvpn: M02rvpn {
+        Mrvpn: M02rvpn {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -145,7 +175,7 @@
             label = "M02RVPN";
         };
 
-        M03bxo: M03bxo {
+        Mbxo: M03bxo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -158,7 +188,7 @@
             label = "M03BXO";
         };
 
-        M04sum: M04sum {
+        Msum: M04sum {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -169,7 +199,7 @@
             label = "M04SUM";
         };
 
-        M05roundup: M05roundup {
+        Mroundup: M05roundup {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -178,6 +208,39 @@
                 <&kp LEFT>;
 
             label = "M05ROUNDUP";
+        };
+
+        MSedit: M06Sedit {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LC(S) &kp LC(END) &kp E &kp D &kp I &kp T &kp DOT>,
+                <&macro_wait_time 400>,
+                <&to 9>;
+
+            label = "M06SEDIT";
+        };
+
+        Msavetofav: Msavetofav {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp F4 &kp LC(A) &kp LS(D) &kp COLON &kp BSLH &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp DOT &kp T &kp H &kp U &kp M &kp B &kp N &kp A &kp I &kp L &kp BSLH &kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp DOT &kp M &kp O &kp V &kp E &kp T &kp O &kp F &kp A &kp V &kp ENTER &kp LA(S)>,
+                <&macro_wait_time 400>,
+                <&to 8>;
+
+            label = "MSAVETOFAV";
+        };
+
+        Msavetonotfav: Msavetonotfav {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp F4 &kp LC(A) &kp LS(D) &kp COLON &kp BSLH &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp PERIOD &kp T &kp H &kp U &kp M &kp B &kp N &kp A &kp I &kp L &kp BSLH &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp DOT &kp M &kp O &kp V &kp E &kp T &kp O &kp A &kp R &kp C &kp H &kp I &kp V &kp E &kp ENTER &kp LA(S)>,
+                <&macro_wait_time 400>,
+                <&to 8>;
+
+            label = "MSAVETONOTFAV";
         };
     };
 
@@ -189,21 +252,21 @@
 &mt Q ESCAPE  &kp W         &kp E         &kp R  &kp T                          &kp Y  &kp U  &kp I           &kp O    &kp P
 &kp A         &kp S         &kp D         &kp F  &kp G                          &kp H  &kp J  &kp K           &kp L    &mt MINUS ENTER
 &kp Z         &kp X         &kp C         &kp V  &kp B                          &kp N  &kp M  &kp COMMA       &kp DOT  &kp SLASH
-&kp LCTRL     &kp LEFT_WIN  &kp LEFT_ALT  &none  &to 1  &kp SPACE    &kp SPACE  &to 1         &kp LEFT_SHIFT  &kp TAB  &kp ESCAPE
+&kp LCTRL     &kp LEFT_WIN  &kp LEFT_ALT  &none  &mo 1  &kp SPACE    &kp SPACE  &mo 1         &kp LEFT_SHIFT  &kp TAB  &kp ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
         };
 
-        LAYER {
+        LAYER01 {
             bindings = <
-&kp LS(NUMBER_1)  &kp F2  &kp LG(E)  &kp LG(R)   &kp F5                                  &kp F6                   &kp F7    &kp F8   &trans  &kp DELETE
-&none             &none   &kp LA(S)  &kp LA(F4)  &to 2                                   &to 2                    &kp HOME  &kp END  &kp F9  &kp F10
-&kt LEFT_SHIFT    &trans  &trans     &trans      &trans                                  &to 3                    &to 4     &trans   &trans  &trans
-&trans            &trans  &trans     &trans      &trans  &kp INT_HENKAN    &kp INT_KANA  &kp LANG_ZENKAKUHANKAKU            &trans   &trans  &none
+&kp LS(NUMBER_1)  &kp F2  &kp LG(E)  &kp LG(R)   &kp F5                                      &kp F6                   &kp F7    &kp F8   &none   &kp DELETE
+&none             &none   &kp LA(S)  &kp LA(F4)  &to 2                                       &to 2                    &kp HOME  &kp END  &kp F9  &kp F10
+&kt LEFT_SHIFT    &none   &sl 5      &to 4       &to 3                                       &to 3                    &to 4     &sl 5    &none   &to 7
+&MPW              &Mrvpn  &Mbxo      &none       &kp K_MENU  &kp INT_HENKAN    &kp INT_KANA  &kp LANG_ZENKAKUHANKAKU            &to 6    &none   &none
             >;
 
-            sensor-bindings = <&inc_dec_kp DOWN UP_ARROW>;
+            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
 
         MOUSE {
@@ -211,7 +274,7 @@
 &to 0           &none         &none         &none  &kp F5                          &none  &none      &kp DELETE  &none  &kp BACKSPACE
 &kp TAB         &none         &none         &none  &none                           &none  &mkp LCLK  &mkp RCLK   &none  &kp ENTER
 &kp LEFT_SHIFT  &none         &none         &none  &none                           &none  &kp LC(C)  &kp LC(V)   &none  &none
-&kp LCTRL       &kp LEFT_GUI  &kp LEFT_ALT  &none  &to 1   &kp SPACE    &kp SPACE  &to 1             &none       &none  &kp ESCAPE
+&kp LCTRL       &kp LEFT_GUI  &kp LEFT_ALT  &none  &mo 1   &kp SPACE    &kp SPACE  &mo 1             &none       &none  &kp ESCAPE
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -233,7 +296,7 @@
 &to 0             &kp F2        &kp F3        &kp F4     &kp F5                          &kp LC(HOME)  &kp HOME       &kp UP    &kp END      &kp DEL
 &kp TAB           &none         &mkp RCLK     &mkp LCLK  &none                           &kp LC(END)   &kp LEFT       &kp DOWN  &kp RIGHT    &kp ENTER
 &kp LEFT_SHIFT    &kp X         &kp C         &kp V      &none                           &none         &kp PAGE_DOWN  &none     &kp PAGE_UP  &none
-&kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &none      &to 1   &kp SPACE    &kp SPACE  &mo 1                        &none     &none        &kp ESCAPE
+&kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &none      &mo 1   &kp SPACE    &kp SPACE  &mo 1                        &none     &none        &kp ESCAPE
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -241,31 +304,13 @@
 
         MARK {
             bindings = <
-&to 0           &trans  &kp GRAVE   &kp DOUBLE_QUOTES  &kp SQT                        &trans       &trans         &trans  &trans       &trans
-&kp TAB         &trans  &kp DOLLAR  &kp HASH           &kp PERCENT                    &kp INT_YEN  &kp AMPERSAND  &trans  &kp AT_SIGN  &kp TILDE
-&kp LEFT_SHIFT  &trans  &trans      &trans             &trans                         &trans       &trans         &trans  &trans       &trans
-&trans          &trans  &trans      &trans             &trans       &trans    &trans  &to 1                       &trans  &trans       &trans
-            >;
-        };
-
-        WORK01-01 {
-            bindings = <
-&to 0           &kp W  &kp E         &trans  &trans                                &kp PAGE_UP    &kp LEFT_BRACKET  &kp UP_ARROW    &kp RIGHT_BRACKET  &kp BACKSPACE
-&kp TAB         &kp S  &none         &trans  &trans                                &kp PAGE_DOWN  &kp LEFT          &kp DOWN_ARROW  &kp RIGHT          &kp ENTER
-&kp LEFT_SHIFT  &kp X  &kp C         &kp V   &trans                                &trans         &kp HOME          &mkp LCLK       &kp END            &trans
-&kp LCTRL       &none  &kp LEFT_ALT  &trans  &kp LEFT_GUI  &kp SPACE    &kp SPACE  &kp ENTER                        &trans          &trans             &trans
+&to 0           &sl 5         &kp GRAVE     &kp DOUBLE_QUOTES  &kp SQT                              &sl 5           &sl 5          &sl 5   &sl 5        &kp BACKSPACE
+&kp TAB         &sl 5         &kp DOLLAR    &kp HASH           &kp PERCENT                          &kp INT_YEN     &kp AMPERSAND  &sl 5   &kp AT_SIGN  &kp TILDE
+&kp LEFT_SHIFT  &sl 5         &sl 5         &sl 5              &sl 5                                &kp UNDERSCORE  &sl 5          &trans  &trans       &trans
+&kp LCTRL       &kp LEFT_GUI  &kp LEFT_ALT  &none              &mo 1        &kp SPACE    &kp SPACE  &mo 1                          &trans  &trans       &kp ESCAPE
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(LG(RIGHT)) LC(LG(LEFT))>;
-        };
-
-        WORK01-02 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans
-&trans  &trans  &trans  &trans  &trans                    &trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans
-&trans  &trans  &trans  &trans  &trans                    &trans           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_0                   &kp PERIOD       &trans           &trans
-            >;
+            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
 
         WIRELESS {
@@ -275,8 +320,57 @@
 &trans        &trans        &trans        &trans        &trans                               &trans          &trans        &trans        &trans        &bt BT_CLR
 &trans        &trans        &trans        &trans        &trans        &trans    &bootloader  &studio_unlock                &trans        &trans        &bt BT_CLR_ALL
             >;
+        };
 
-            sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
+        LAYER02 {
+            bindings = <
+&to 0   &trans  &trans  &trans  &trans                                &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &to 11  &to 8   &trans                                &trans  &to 8   &to 11  &trans  &trans
+&trans  &trans  &trans  &to 10  &trans                                &trans  &to 10  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &kp LEFT_GUI  &kp SPACE    &kp SPACE  &mo 1           &trans  &trans  &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp LC(LG(RIGHT)) LC(LG(LEFT))>;
+        };
+
+        WORK01-01 {
+            bindings = <
+&to 0           &kp W  &kp E         &kp R  &none                                 &kp PAGE_UP    &kp LEFT_BRACKET  &kp UP_ARROW    &kp RIGHT_BRACKET  &kp BACKSPACE
+&kp TAB         &kp S  &none         &none  &none                                 &kp PAGE_DOWN  &kp LEFT          &kp DOWN_ARROW  &kp RIGHT          &kp ENTER
+&kp LEFT_SHIFT  &kp X  &kp C         &kp V  &none                                 &to 9          &kp HOME          &mkp LCLK       &kp END            &none
+&kp LCTRL       &none  &kp LEFT_ALT  &none  &kp LEFT_GUI  &kp SPACE    &kp SPACE  &kp ENTER                        &none           &none              &kp ESCAPE
+            >;
+
+            sensor-bindings = <&inc_dec_kp LC(LG(RIGHT)) LC(LG(LEFT))>;
+        };
+
+        WORK01-02 {
+            bindings = <
+&to 0           &kp F2  &kp E         &kp R  &kp F5                              &Msavetofav      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE
+&kp TAB         &kp S   &none         &none  &none                               &Msavetonotfav   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ENTER
+&kp LEFT_SHIFT  &kp X   &kp C         &kp V  &none                               &to 8            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none
+&kp LCTRL       &none   &kp LEFT_ALT  &none  &kp LEFT_GUI  &kp F11    &kp ENTER  &kp KP_NUMBER_0                   &kp PERIOD       &none            &kp ESCAPE
+            >;
+
+            sensor-bindings = <&inc_dec_kp LC(LG(RIGHT)) LC(LG(LEFT))>;
+        };
+
+        WORK02 {
+            bindings = <
+&to 0           &kp Q         &kp UP_ARROW    &kp R      &kp T                                 &none  &none      &mkp LCLK  &mkp RCLK  &kp BACKSPACE
+&kp LEFT        &kp LEFT      &kp UP_ARROW    &kp RIGHT  &kp RIGHT                             &none  &mkp LCLK  &mkp RCLK  &none      &kp ENTER
+&kp LEFT_SHIFT  &kp DOWN      &kp DOWN_ARROW  &kp V      &kp B                                 &none  &none      &none      &none      &none
+&kp LCTRL       &kp LEFT_GUI  &kp LEFT_ALT    &none      &kp NUMBER_2  &kp SPACE    &kp SPACE  &mo 1             &none      &none      &kp ESCAPE
+            >;
+        };
+
+        WORK03 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans  &trans  &trans
+            >;
         };
     };
 };
