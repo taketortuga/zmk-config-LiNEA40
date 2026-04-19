@@ -324,10 +324,10 @@
 
         MARK {
             bindings = <
-&to 0           &sl 6         &kp GRAVE     &kp DOUBLE_QUOTES  &kp SQT                              &sl 6           &sl 6          &sl 6  &sl 6   &kp BACKSPACE
-&kp TAB         &sl 6         &kp DOLLAR    &kp HASH           &kp PERCENT                          &kp INT_YEN     &kp AMPERSAND  &sl 6  &kp AT  &kp TILDE
-&kp LEFT_SHIFT  &sl 6         &sl 6         &sl 6              &sl 6                                &kp UNDERSCORE  &sl 6          &sl 6  &sl 6   &sl 6
-&mt LCTRL TAB   &kp LEFT_GUI  &kp LEFT_ALT  &none              &mo 1        &kp SPACE    &kp SPACE  &mo 1                          &sl 6  &sl 6   &kp ESCAPE
+&to 0           &none         &kp GRAVE     &kp DOUBLE_QUOTES  &kp SQT                              &none           &none          &none  &none   &kp BACKSPACE
+&kp TAB         &none         &kp DOLLAR    &kp HASH           &kp PERCENT                          &kp INT_YEN     &kp AMPERSAND  &none  &kp AT  &kp TILDE
+&kp LEFT_SHIFT  &none         &none         &none              &none                                &kp UNDERSCORE  &none          &none  &none   &none
+&mt LCTRL TAB   &kp LEFT_GUI  &kp LEFT_ALT  &none              &mo 1        &kp SPACE    &kp SPACE  &mo 1                          &none  &none   &kp ESCAPE
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -338,7 +338,7 @@
 &to 0        &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &none        &none           &none         &none         &none                                       &none         &out OUT_USB  &out OUT_TOG  &none         &none
 &none        &none           &none         &none         &none                                       &none         &none         &none         &none         &bt BT_CLR
-&bootloader  &studio_unlock  &none         &none         &none         &kp LEFT_GUI    &kp LEFT_GUI  &mo 1                       &sl 7         &none         &bt BT_CLR_ALL
+&bootloader  &studio_unlock  &none         &none         &mo 1         &kp LEFT_GUI    &kp LEFT_GUI  &mo 1                       &to 0         &none         &bt BT_CLR_ALL
             >;
         };
 
