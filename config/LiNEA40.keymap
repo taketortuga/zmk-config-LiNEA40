@@ -73,7 +73,8 @@
     layer4_slow {
         layers = <4>;
         input-processors = <&zip_xy_scaler 1 10>, <&zip_xy_scaler 1 5>;
-  // MOUSE_SLOW = 0.02
+
+        // MOUSE_SLOW = 0.02
     };
 };
 
@@ -355,7 +356,7 @@
 &to 0        &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &none        &none           &none         &none         &none                                       &none         &out OUT_USB  &out OUT_TOG  &none         &none
 &none        &none           &none         &none         &none                                       &none         &none         &none         &none         &bt BT_CLR
-&bootloader  &studio_unlock  &none         &none         &none         &kp LEFT_GUI    &kp LEFT_GUI  &mo 1                       &to 0         &none         &bt BT_CLR_ALL
+&bootloader  &studio_unlock  &none         &none         &none         &kp LEFT_GUI    &kp LEFT_GUI  &mo 1                       &none         &none         &bt BT_CLR_ALL
             >;
         };
 
