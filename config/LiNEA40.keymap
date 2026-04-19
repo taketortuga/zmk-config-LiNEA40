@@ -302,10 +302,10 @@
 
         NUMBER {
             bindings = <
-&to 0             &kp NUMBER_2  &kp NUMBER_3  &kp R          &kp F4                                &kp KP_ASTERISK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE
-&kp A             &kp S         &kp D         &kp SEMICOLON  &kp COLON                             &kp KP_MINUS     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &mt KP_MINUS KP_ENTER
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V          &Msum                                 &kp KP_SLASH     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT
-&mt LCTRL TAB     &kp LEFT_GUI  &kp LEFT_ALT  &none          &mo 1      &kp SPACE    &kp KP_EQUAL  &kp KP_NUMBER_0                   &kp KP_DOT       &kp KP_PLUS      &kp ESCAPE
+&to 0             &kp NUMBER_2  &kp NUMBER_3  &kp R          &kp F4                                      &kp KP_ASTERISK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE
+&kp A             &kp S         &kp D         &kp SEMICOLON  &kp COLON                                   &kp KP_MINUS     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &mt KP_MINUS KP_ENTER
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V          &Msum                                       &kp KP_SLASH     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT
+&mt LCTRL TAB     &kp LEFT_GUI  &kp LEFT_ALT  &none          &mo 1      &kp SPACE    &kp KP_EQUAL_AS400  &kp KP_NUMBER_0                   &kp KP_DOT       &kp KP_PLUS      &kp ESCAPE
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
