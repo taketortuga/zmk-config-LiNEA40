@@ -57,7 +57,7 @@
     input-processors = <&zip_xy_scaler 2 1>;  // 通常 2.0
     layer1_slow {
         layers = <1>;
-        input-processors = <&zip_xy_scaler 1 10>;  // LAYER01 = 0.1
+        input-processors = <&zip_xy_scaler 4 5>;  // LAYER01 = 0.8
     };
 
     layer2_mouse {
