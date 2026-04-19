@@ -54,27 +54,20 @@
 };
 
 &trackball_listener {
-    input-processors = <&zip_xy_scaler 1 10>;  // 通常 0.1
-    layer1_fast {
+    input-processors = <&zip_xy_scaler 2 1>;  // 通常 2.0
+    layer1_slow {
         layers = <1>;
-        input-processors = <&zip_xy_scaler 3 1>;  // LAYER01 = 3.0
+        input-processors = <&zip_xy_scaler 1 10>;  // LAYER01 = 0.1
     };
 
     layer2_mouse {
         layers = <2>;
-        input-processors = <&zip_xy_scaler 1 10>;  // MOUSE = 0.1
-    };
-
-    layer3_vfast {
-        layers = <3>;
-        input-processors = <&zip_xy_scaler 3 1>;  // MOUSE_VFAST = 3.0
+        input-processors = <&zip_xy_scaler 2 1>;  // MOUSE = 2.0
     };
 
     layer4_slow {
         layers = <4>;
-        input-processors = <&zip_xy_scaler 1 10>, <&zip_xy_scaler 1 5>;
-
-        // MOUSE_SLOW = 0.02
+        input-processors = <&zip_xy_scaler 1 10>;　// MOUSE_SLOW = 0.1
     };
 };
 
