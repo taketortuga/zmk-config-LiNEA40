@@ -67,7 +67,7 @@
 
     layer4_slow {
         layers = <3>;
-        input-processors = <&zip_xy_scaler 1 10>;　// MOUSE_SLOW = 0.1
+        input-processors = <&zip_xy_scaler 1 10>;  // MOUSE_SLOW = 0.1
     };
 };
 
