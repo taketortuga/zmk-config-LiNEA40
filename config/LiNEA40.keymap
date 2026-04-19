@@ -232,7 +232,7 @@
             bindings =
                 <&kp LC(S) &kp LC(END) &kp E &kp D &kp I &kp T &kp DOT>,
                 <&macro_wait_time 400>,
-                <&to 11>;
+                <&to 10>;
 
             label = "M06SEDIT";
         };
@@ -243,7 +243,7 @@
             bindings =
                 <&kp F4 &kp LC(A) &kp LS(D) &kp COLON &kp BSLH &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp DOT &kp T &kp H &kp U &kp M &kp B &kp N &kp A &kp I &kp L &kp BSLH &kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp DOT &kp M &kp O &kp V &kp E &kp T &kp O &kp F &kp A &kp V &kp ENTER &kp LA(S)>,
                 <&macro_wait_time 400>,
-                <&to 10>;
+                <&to 9>;
 
             label = "MSAVETOFAV";
         };
@@ -254,7 +254,7 @@
             bindings =
                 <&kp F4 &kp LC(A) &kp LS(D) &kp COLON &kp BSLH &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp PERIOD &kp T &kp H &kp U &kp M &kp B &kp N &kp A &kp I &kp L &kp BSLH &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp DOT &kp M &kp O &kp V &kp E &kp T &kp O &kp A &kp R &kp C &kp H &kp I &kp V &kp E &kp ENTER &kp LA(S)>,
                 <&macro_wait_time 400>,
-                <&to 10>;
+                <&to 9>;
 
             label = "MSAVETONOTFAV";
         };
@@ -276,10 +276,10 @@
 
         LAYER01 {
             bindings = <
-&kp LS(NUMBER_1)  &kp F2  &kp LG(E)  &kp LG(R)   &kp F5                                      &kp F6                   &kp F7    &kp F8   &none   &kp DELETE
-&none             &none   &kp LA(S)  &kp LA(F4)  &to 2                                       &to 2                    &kp HOME  &kp END  &kp F9  &kp F10
-&kt LEFT_SHIFT    &none   &sl 7      &to 6       &to 5                                       &to 5                    &to 6     &sl 7    &none   &to 9
-&MPW              &Mrvpn  &Mbxo      &none       &kp K_MENU  &kp INT_HENKAN    &kp INT_KANA  &kp LANG_ZENKAKUHANKAKU            &sl 8    &none   &none
+&kp LS(NUMBER_1)  &kp F2  &kp LG(E)  &kp LG(R)   &kp F5                                    &kp F6                   &kp F7    &kp F8   &none   &kp DELETE
+&none             &none   &kp LA(S)  &kp LA(F4)  &to 2                                     &to 2                    &kp HOME  &kp END  &kp F9  &kp F10
+&kt LEFT_SHIFT    &none   &sl 6      &to 5       &to 4                                     &to 4                    &to 5     &sl 6    &none   &to 8
+&MPW              &Mrvpn  &Mbxo      &none       &kp RALT  &kp INT_HENKAN    &kp INT_KANA  &kp LANG_ZENKAKUHANKAKU            &sl 7    &none   &none
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -287,20 +287,9 @@
 
         MOUSE {
             bindings = <
-&to 0           &none         &none         &kp R  &kp F5                          &none  &none      &kp DELETE  &to 3  &kp BACKSPACE
-&kp A           &kp S         &kp D         &none  &none                           &none  &mkp LCLK  &mkp RCLK   &to 2  &kp ENTER
-&kp LEFT_SHIFT  &kp X         &kp C         &kp V  &none                           &none  &kp LC(C)  &kp LC(V)   &to 4  &none
-&mt LCTRL TAB   &kp LEFT_GUI  &kp LEFT_ALT  &none  &mo 1   &kp SPACE    &kp SPACE  &mo 1             &none       &none  &kp ESCAPE
-            >;
-
-            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
-        };
-
-        MOUSE_VFAST {
-            bindings = <
-&to 0           &none         &none         &kp R  &kp F5                          &none  &none      &kp DELETE  &to 3  &kp BACKSPACE
-&kp A           &kp S         &kp D         &none  &none                           &none  &mkp LCLK  &mkp RCLK   &to 2  &kp ENTER
-&kp LEFT_SHIFT  &kp X         &kp C         &kp V  &none                           &none  &kp LC(C)  &kp LC(V)   &to 4  &none
+&to 0           &none         &none         &kp R  &kp F5                          &none  &none      &kp DELETE  &none  &kp BACKSPACE
+&kp A           &kp S         &kp D         &none  &none                           &none  &mkp LCLK  &mkp RCLK   &to 3  &kp ENTER
+&kp LEFT_SHIFT  &kp X         &kp C         &kp V  &none                           &none  &kp LC(C)  &kp LC(V)   &none  &none
 &mt LCTRL TAB   &kp LEFT_GUI  &kp LEFT_ALT  &none  &mo 1   &kp SPACE    &kp SPACE  &mo 1             &none       &none  &kp ESCAPE
             >;
 
@@ -309,9 +298,9 @@
 
         MOUSE_SLOW {
             bindings = <
-&to 0           &none         &none         &kp R  &kp F5                          &none  &none      &kp DELETE  &to 3  &kp BACKSPACE
+&to 0           &none         &none         &kp R  &kp F5                          &none  &none      &kp DELETE  &none  &kp BACKSPACE
 &kp A           &kp S         &kp D         &none  &none                           &none  &mkp LCLK  &mkp RCLK   &to 2  &kp ENTER
-&kp LEFT_SHIFT  &kp X         &kp C         &kp V  &none                           &none  &kp LC(C)  &kp LC(V)   &to 4  &none
+&kp LEFT_SHIFT  &kp X         &kp C         &kp V  &none                           &none  &kp LC(C)  &kp LC(V)   &none  &none
 &mt LCTRL TAB   &kp LEFT_GUI  &kp LEFT_ALT  &none  &mo 1   &kp SPACE    &kp SPACE  &mo 1             &none       &none  &kp ESCAPE
             >;
 
@@ -320,10 +309,10 @@
 
         NUMBER {
             bindings = <
-&to 0             &kp NUMBER_2  &kp NUMBER_3  &kp R          &kp F4                             &kp ASTERISK     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE
-&kp A             &kp S         &kp D         &kp SEMICOLON  &kp COLON                          &kp MINUS        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_ENTER
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V          &Msum                              &kp SLASH        &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT
-&mt LCTRL TAB     &kp LEFT_GUI  &kp LEFT_ALT  &none          &mo 1      &kp SPACE    &kp EQUAL  &kp KP_NUMBER_0                   &kp PERIOD       &kp PLUS         &kp ESCAPE
+&to 0             &kp NUMBER_2  &kp NUMBER_3  &kp R          &kp F4                                &kp KP_ASTERISK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE
+&kp A             &kp S         &kp D         &kp SEMICOLON  &kp COLON                             &kp KP_MINUS     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_ENTER
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V          &Msum                                 &kp KP_SLASH     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT
+&mt LCTRL TAB     &kp LEFT_GUI  &kp LEFT_ALT  &none          &mo 1      &kp SPACE    &kp KP_EQUAL  &kp KP_NUMBER_0                   &kp KP_DOT       &kp KP_PLUS      &kp ESCAPE
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -342,10 +331,10 @@
 
         MARK {
             bindings = <
-&to 0           &sl 7         &kp GRAVE     &kp DOUBLE_QUOTES  &kp SQT                              &sl 7           &sl 7          &sl 7  &sl 7        &kp BACKSPACE
-&kp TAB         &sl 7         &kp DOLLAR    &kp HASH           &kp PERCENT                          &kp INT_YEN     &kp AMPERSAND  &sl 7  &kp AT_SIGN  &kp TILDE
-&kp LEFT_SHIFT  &sl 7         &sl 7         &sl 7              &sl 7                                &kp UNDERSCORE  &sl 7          &sl 7  &sl 7        &sl 7
-&mt LCTRL TAB   &kp LEFT_GUI  &kp LEFT_ALT  &none              &mo 1        &kp SPACE    &kp SPACE  &mo 1                          &sl 7  &sl 7        &kp ESCAPE
+&to 0           &sl 6         &kp GRAVE     &kp DOUBLE_QUOTES  &kp SQT                              &sl 6           &sl 6          &sl 6  &sl 6        &kp BACKSPACE
+&kp TAB         &sl 6         &kp DOLLAR    &kp HASH           &kp PERCENT                          &kp INT_YEN     &kp AMPERSAND  &sl 6  &kp AT_SIGN  &kp TILDE
+&kp LEFT_SHIFT  &sl 6         &sl 6         &sl 6              &sl 6                                &kp UNDERSCORE  &sl 6          &sl 6  &sl 6        &sl 6
+&mt LCTRL TAB   &kp LEFT_GUI  &kp LEFT_ALT  &none              &mo 1        &kp SPACE    &kp SPACE  &mo 1                          &sl 6  &sl 6        &kp ESCAPE
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -363,8 +352,8 @@
         LAYER02 {
             bindings = <
 &to 0  &none  &none  &none   &none                                 &none  &none   &none  &none  &none
-&none  &none  &none  &to 10  &none                                 &none  &to 10  &none  &none  &none
-&none  &none  &none  &to 12  &none                                 &none  &to 12  &none  &none  &none
+&none  &none  &none  &to 9   &none                                 &none  &to 9   &none  &none  &none
+&none  &none  &none  &to 11  &none                                 &none  &to 11  &none  &none  &none
 &none  &none  &none  &none   &kp LEFT_GUI  &kp SPACE    &kp SPACE  &mo 1          &none  &none  &none
             >;
 
@@ -375,7 +364,7 @@
             bindings = <
 &to 0             &kp W  &kp E         &kp R  &none                                   &kp PAGE_UP    &kp LEFT_BRACKET  &kp UP_ARROW    &kp RIGHT_BRACKET  &kp BACKSPACE
 &kp A             &kp S  &none         &none  &msc SCRL_UP                            &kp PAGE_DOWN  &kp LEFT          &kp DOWN_ARROW  &kp RIGHT          &kp ENTER
-&mt LEFT_SHIFT Z  &kp X  &kp C         &kp V  &msc SCRL_DOWN                          &to 11         &kp HOME          &mkp LCLK       &kp END            &none
+&mt LEFT_SHIFT Z  &kp X  &kp C         &kp V  &msc SCRL_DOWN                          &to 10         &kp HOME          &mkp LCLK       &kp END            &none
 &mt LCTRL TAB     &none  &kp LEFT_ALT  &none  &kp LEFT_GUI    &kp SPACE    &kp SPACE  &kp ENTER                        &none           &none              &kp ESCAPE
             >;
 
@@ -386,7 +375,7 @@
             bindings = <
 &to 0           &kp F2  &kp E         &kp R  &kp F5                                &Msavetofav      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE
 &kp TAB         &kp S   &none         &none  &msc SCRL_DOWN                        &Msavetonotfav   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ENTER
-&kp LEFT_SHIFT  &kp X   &kp C         &kp V  &msc SCRL_DOWN                        &to 10           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none
+&kp LEFT_SHIFT  &kp X   &kp C         &kp V  &msc SCRL_DOWN                        &to 9            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none
 &kp LCTRL       &none   &kp LEFT_ALT  &none  &kp LEFT_GUI    &kp F11    &kp ENTER  &kp KP_NUMBER_0                   &kp PERIOD       &none            &kp ESCAPE
             >;
 
