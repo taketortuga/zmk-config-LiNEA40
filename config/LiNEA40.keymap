@@ -271,7 +271,7 @@
             bindings = <
 &kp LS(NUMBER_1)  &kp F2  &kp LG(E)  &kp LG(R)   &kp F5                                      &kp F6     &kp F7    &kp F8   &none   &kp DELETE
 &none             &none   &kp LA(S)  &kp LA(F4)  &to 2                                       &to 2      &kp HOME  &kp END  &kp F9  &kp F10
-&kt LEFT_SHIFT    &none   &to 6      &to 5       &to 4                                       &to 4      &to 5     &to 6    &none   &to 8
+&kp LS(CAPSLOCK)  &none   &to 6      &to 5       &to 4                                       &to 4      &to 5     &to 6    &none   &to 8
 &MPW              &Mrvpn  &Mbxo      &none       &kp C_MENU  &kp INT_HENKAN    &kp INT_KANA  &kp GRAVE            &to 7    &none   &none
             >;
 
@@ -305,7 +305,7 @@
 &to 0             &kp NUMBER_2  &kp NUMBER_3  &kp R          &kp F4                                      &kp KP_ASTERISK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE
 &kp A             &kp S         &kp D         &kp SEMICOLON  &kp COLON                                   &kp KP_MINUS     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &mt KP_MINUS KP_ENTER
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V          &Msum                                       &kp KP_SLASH     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT
-&mt LCTRL TAB     &kp LEFT_GUI  &kp LEFT_ALT  &none          &mo 1      &kp SPACE    &kp KP_EQUAL_AS400  &kp KP_NUMBER_0                   &kp KP_DOT       &kp KP_PLUS      &kp ESCAPE
+&mt LCTRL TAB     &kp LEFT_GUI  &kp LEFT_ALT  &none          &mo 1      &kp SPACE    &kp KP_EQUAL_AS400  &kp KP_NUMBER_0                   &kp KP_DOT       &kp KP_PLUS      &mt KP_NUMLOCK ESCAPE
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
