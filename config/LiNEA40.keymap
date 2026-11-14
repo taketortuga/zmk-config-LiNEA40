@@ -58,7 +58,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -253,7 +253,7 @@
 &mt Q ESCAPE      &kp W         &kp E         &kp R  &kp T                              &kp Y  &kp U  &kp I                &kp O             &mt P BACKSPACE
 &kp A             &kp S         &kp D         &kp F  &kp G                              &kp H  &kp J  &kp K                &kp L             &mt MINUS ENTER
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V  &kp B                              &kp N  &kp M  &kp COMMA            &mt DOT UP_ARROW  &kp SLASH
-&mt LCTRL TAB     &kp LEFT_WIN  &kp LEFT_ALT  &none  &mo 1  &lt 3 SPACE    &lt 4 SPACE  &mo 1         &mt LEFT_SHIFT LEFT  &kp DOWN          &kp RIGHT
+&mt LCTRL TAB     &kp LEFT_WIN  &kp LEFT_ALT  &none  &mo 1  &lt 5 SPACE    &lt 3 SPACE  &mo 1         &mt LEFT_SHIFT LEFT  &kp DOWN          &kp RIGHT
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -261,10 +261,10 @@
 
         LAYER01 {
             bindings = <
-&none           &none   &none  &none  &none                                       &kp F6                   &kp F7       &kp F8         &none   &kp DELETE
-&none           &none   &none  &none  &none                                       &none                    &kp HOME     &kp END        &kp F9  &kp F10
-&kt LEFT_SHIFT  &none   &none  &none  &none                                       &none                    &kp PAGE_UP  &kp PAGE_DOWN  &none   &none
-&MPW            &Mrvpn  &Mbxo  &none  &kp K_MENU  &kp INT_HENKAN    &kp INT_KANA  &kp LANG_ZENKAKUHANKAKU               &none          &none   &none
+&bt BT_CLR    &none           &none  &none  &none                                       &kp F6                   &kp F7       &kp F8         &none   &kp DELETE
+&bt BT_SEL 0  &none           &none  &none  &none                                       &none                    &kp HOME     &kp END        &kp F9  &kp F10
+&bt BT_SEL 1  &none           &none  &none  &none                                       &none                    &kp PAGE_UP  &kp PAGE_DOWN  &none   &none
+&bt BT_SEL 2  &studio_unlock  &none  &none  &kp K_MENU  &kp INT_HENKAN    &kp INT_KANA  &kp LANG_ZENKAKUHANKAKU               &none          &none   &bootloader
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -281,23 +281,23 @@
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
 
-        MARK {
+        COUSOR {
             bindings = <
-&to 0           &sl 3         &kp GRAVE     &kp DOUBLE_QUOTES  &kp SQT                              &none           &sl 3     &sl 3     &sl 3        &kp BACKSPACE
-&kp TAB         &sl 3         &kp DOLLAR    &kp HASH           &kp PERCENT                          &kp INT_YEN     &kp SEMI  &kp APOS  &kp AT_SIGN  &kp TILDE
-&kp LEFT_SHIFT  &sl 3         &sl 3         &sl 3              &sl 3                                &kp UNDERSCORE  &sl 3     &sl 3     &sl 3        &sl 3
-&mt LCTRL TAB   &kp LEFT_GUI  &kp LEFT_ALT  &none              &mo 1        &kp SPACE    &kp SPACE  &mo 1                     &sl 3     &sl 3        &kp ESCAPE
+&none           &kp F2        &kp F3  &kp F4  &kp F5                          &kp LC(HOME)  &kp HOME       &kp UP    &kp END      &kp DEL
+&none           &none         &none   &MPW    &Mrvpn                          &kp LC(END)   &kp LEFT       &kp DOWN  &kp RIGHT    &kp ENTER
+&kp LEFT_SHIFT  &none         &none   &none   &Mbxo                           &none         &kp PAGE_DOWN  &none     &kp PAGE_UP  &none
+&none           &kp LEFT_GUI  &none   &none   &none   &kp SPACE    &kp SPACE  &mo 1                        &none     &none        &kp ESCAPE
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
 
-        COUSOR {
+        MARK {
             bindings = <
-&bt BT_CLR    &kp F2        &kp F3        &kp F4  &kp F5                          &kp LC(HOME)  &kp HOME       &kp UP    &kp END      &kp DEL
-&bt BT_SEL 0  &none         &none         &MPW    &Mrvpn                          &kp LC(END)   &kp LEFT       &kp DOWN  &kp RIGHT    &kp ENTER
-&bt BT_SEL 1  &kp X         &kp C         &kp V   &Mbxo                           &none         &kp PAGE_DOWN  &none     &kp PAGE_UP  &none
-&bt BT_SEL 2  &kp LEFT_GUI  &kp LEFT_ALT  &none   &mo 1   &kp SPACE    &kp SPACE  &mo 1                        &none     &none        &kp ESCAPE
+&to 0           &sl 5         &kp GRAVE     &kp DOUBLE_QUOTES  &kp SQT                              &none           &sl 5     &sl 5     &sl 5        &kp BACKSPACE
+&kp TAB         &sl 5         &kp DOLLAR    &kp HASH           &kp PERCENT                          &kp INT_YEN     &kp SEMI  &kp APOS  &kp AT_SIGN  &kp TILDE
+&kp LEFT_SHIFT  &sl 5         &sl 5         &sl 5              &sl 5                                &kp UNDERSCORE  &sl 5     &sl 5     &sl 5        &sl 5
+&mt LCTRL TAB   &kp LEFT_GUI  &kp LEFT_ALT  &none              &mo 1        &kp SPACE    &kp SPACE  &mo 1                     &sl 5     &sl 5        &kp ESCAPE
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
