@@ -58,7 +58,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -69,31 +69,31 @@
 
         LeftClick {
             bindings = <&mkp MB1>;
-            key-positions = <16 15>;
+            key-positions = <16 17>;
         };
 
         RightClick {
             bindings = <&mkp MB2>;
-            key-positions = <17 16>;
+            key-positions = <17 18>;
         };
 
         k-open01 {
-            bindings = <&kp LEFT_PARENTHESIS>;
+            bindings = <&kp ASTERISK>;
             key-positions = <3 13>;
         };
 
         k-close01 {
-            bindings = <&kp RIGHT_PARENTHESIS>;
+            bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <6 16>;
         };
 
         k-open02 {
-            bindings = <&kp LEFT_BRACKET>;
+            bindings = <&kp RIGHT_BRACKET>;
             key-positions = <13 23>;
         };
 
         k-close02 {
-            bindings = <&kp RIGHT_BRACKET>;
+            bindings = <&kp HASH>;
             key-positions = <16 26>;
         };
 
@@ -103,22 +103,22 @@
         };
 
         up {
-            bindings = <&kp UP_ARROW>;
+            bindings = <&kp LA(UP_ARROW)>;
             key-positions = <27 28 29>;
         };
 
         down {
-            bindings = <&kp DOWN_ARROW>;
-            key-positions = <38 39 40>;
+            bindings = <&kp ENTER>;
+            key-positions = <39 28>;
         };
 
         left {
-            bindings = <&kp LEFT>;
+            bindings = <&kp LA(LEFT)>;
             key-positions = <27 38>;
         };
 
         right {
-            bindings = <&kp RIGHT>;
+            bindings = <&kp LA(RIGHT)>;
             key-positions = <29 40>;
         };
 
@@ -294,10 +294,10 @@
 
         MARK {
             bindings = <
-&to 0           &sl 5         &kp GRAVE     &kp DOUBLE_QUOTES  &kp SQT                              &none           &sl 5      &sl 5     &sl 5        &kp BACKSPACE
-&kp TAB         &sl 5         &kp DOLLAR    &kp HASH           &kp PERCENT                          &kp INT_YEN     &kp SEMI   &kp APOS  &kp AT_SIGN  &kp TILDE
-&kp LEFT_SHIFT  &sl 5         &sl 5         &sl 5              &sl 5                                &kp UNDERSCORE  &kp UNDER  &sl 5     &sl 5        &sl 5
-&mt LCTRL TAB   &kp LEFT_GUI  &kp LEFT_ALT  &none              &mo 1        &kp SPACE    &kp SPACE  &mo 1                      &sl 5     &sl 5        &kp ESCAPE
+&to 0           &sl 5         &kp GRAVE     &kp DOUBLE_QUOTES  &kp SQT                              &none           &sl 5      &sl 5     &sl 5             &kp BACKSPACE
+&kp TAB         &sl 5         &kp DOLLAR    &kp HASH           &kp PERCENT                          &kp INT_YEN     &kp SEMI   &kp APOS  &kp LEFT_BRACKET  &kp TILDE
+&kp LEFT_SHIFT  &sl 5         &sl 5         &sl 5              &sl 5                                &kp UNDERSCORE  &kp UNDER  &sl 5     &sl 5             &sl 5
+&mt LCTRL TAB   &kp LEFT_GUI  &kp LEFT_ALT  &none              &mo 1        &kp SPACE    &kp SPACE  &mo 1                      &sl 5     &sl 5             &kp ESCAPE
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
