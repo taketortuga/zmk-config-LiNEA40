@@ -58,7 +58,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -261,10 +261,10 @@
 
         LAYER01 {
             bindings = <
-&bt BT_CLR    &none           &none  &none  &none                                       &kp F6                   &kp F7       &kp F8         &none   &kp DELETE
-&bt BT_SEL 0  &none           &none  &none  &none                                       &none                    &kp HOME     &kp END        &kp F9  &kp F10
-&bt BT_SEL 1  &none           &none  &none  &none                                       &none                    &kp PAGE_UP  &kp PAGE_DOWN  &none   &none
-&bt BT_SEL 2  &studio_unlock  &none  &none  &kp K_MENU  &kp INT_HENKAN    &kp INT_KANA  &kp LANG_ZENKAKUHANKAKU               &none          &none   &bootloader
+&bt BT_CLR    &none           &none  &none  &none                                                  &kp F6                   &kp F7       &kp F8         &none   &kp DELETE
+&bt BT_SEL 0  &none           &none  &MPW   &Mrvpn                                                 &none                    &kp HOME     &kp END        &kp F9  &kp F10
+&bt BT_SEL 1  &none           &none  &none  &Mbxo                                                  &none                    &kp PAGE_UP  &kp PAGE_DOWN  &none   &none
+&bt BT_SEL 2  &studio_unlock  &none  &none  &kp LANG_ZENKAKUHANKAKU  &kp INT_HENKAN    &kp C_MENU  &kp LANG_ZENKAKUHANKAKU               &none          &none   &bootloader
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -272,10 +272,10 @@
 
         NUMBER {
             bindings = <
-&kp LS(NUMBER_1)  &kp F2        &kp LG(E)     &kp LG(R)  &kp F4                                  &kp ASTERISK     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE
-&kp A             &kp S         &kp DOLLAR    &kp HASH   &kp COLON                               &kp MINUS        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_ENTER
-&kp LS(CAPS)      &kp X         &kp C         &kp V      &Msum                                   &kp SLASH        &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT
-&mt LCTRL TAB     &kp LEFT_GUI  &kp LEFT_ALT  &none      &mo 1      &kp SPACE    &mt EQUAL INT2  &kp KP_NUMBER_0                   &kp PERIOD       &kp PLUS         &kp KP_NUMLOCK
+&kp LS(NUMBER_1)  &kp F2        &kp LG(E)     &kp LG(R)  &kp F4                                     &kp ASTERISK     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE
+&kp A             &kp S         &kp DOLLAR    &kp HASH   &kp COLON                                  &kp MINUS        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_ENTER
+&kp LS(CAPS)      &kp X         &kp C         &kp V      &Msum                                      &kp SLASH        &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT
+&mt LCTRL TAB     &kp LEFT_GUI  &kp LEFT_ALT  &none      &mo 1      &kp SPACE    &mt KP_EQUAL INT2  &kp KP_NUMBER_0                   &kp PERIOD       &kp PLUS         &kp KP_NUMLOCK
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -294,10 +294,10 @@
 
         MARK {
             bindings = <
-&to 0           &sl 5         &kp GRAVE     &kp DOUBLE_QUOTES  &kp SQT                              &none           &sl 5     &sl 5     &sl 5        &kp BACKSPACE
-&kp TAB         &sl 5         &kp DOLLAR    &kp HASH           &kp PERCENT                          &kp INT_YEN     &kp SEMI  &kp APOS  &kp AT_SIGN  &kp TILDE
-&kp LEFT_SHIFT  &sl 5         &sl 5         &sl 5              &sl 5                                &kp UNDERSCORE  &sl 5     &sl 5     &sl 5        &sl 5
-&mt LCTRL TAB   &kp LEFT_GUI  &kp LEFT_ALT  &none              &mo 1        &kp SPACE    &kp SPACE  &mo 1                     &sl 5     &sl 5        &kp ESCAPE
+&to 0           &sl 5         &kp GRAVE     &kp DOUBLE_QUOTES  &kp SQT                              &none           &sl 5      &sl 5     &sl 5        &kp BACKSPACE
+&kp TAB         &sl 5         &kp DOLLAR    &kp HASH           &kp PERCENT                          &kp INT_YEN     &kp SEMI   &kp APOS  &kp AT_SIGN  &kp TILDE
+&kp LEFT_SHIFT  &sl 5         &sl 5         &sl 5              &sl 5                                &kp UNDERSCORE  &kp UNDER  &sl 5     &sl 5        &sl 5
+&mt LCTRL TAB   &kp LEFT_GUI  &kp LEFT_ALT  &none              &mo 1        &kp SPACE    &kp SPACE  &mo 1                      &sl 5     &sl 5        &kp ESCAPE
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
