@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -199,7 +199,7 @@
             bindings =
                 <&kp LC(S)>,
                 <&macro_wait_time 400>,
-                <&kp LC(END) &kp DOT &kp E &kp D &kp I &kp T>,
+                <&kp END &kp DOT &kp E &kp D &kp I &kp T>,
                 <&macro_wait_time 400>,
                 <&to 7>;
 
@@ -210,9 +210,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp F4 &kp LC(A) &kp LS(D) &kp APOS &kp INT3 &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp DOT &kp T &kp H &kp U &kp M &kp B &kp N &kp A &kp I &kp L &kp INT3 &kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp DOT &kp M &kp O &kp V &kp E &kp T &kp O &kp F &kp A &kp V &kp ENTER &kp LA(S)>,
+                <&kp F4 &kp LC(A) &kp LS(D) &kp APOS &kp INT3 &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp DOT &kp T &kp H &kp U &kp M &kp B &kp N &kp A &kp I &kp L &kp INT3 &kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp DOT &kp M &kp O &kp V &kp E &kp T &kp O &kp F &kp A &kp V &kp ENTER>,
                 <&macro_wait_time 400>,
-                <&to 6>;
+                <&kp LA(S) &to 6>;
 
             label = "MSAVETOFAV";
         };
@@ -309,10 +309,10 @@
 
         WORK0102 {
             bindings = <
-&to 0           &kp F2  &kp E         &kp R  &kp F5                                &Msavetofav      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE
-&kp TAB         &kp S   &none         &none  &msc SCRL_DOWN                        &Msavetonotfav   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ENTER
-&kp LEFT_SHIFT  &kp X   &kp C         &kp V  &msc SCRL_DOWN                        &to 6            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none
-&kp LCTRL       &none   &kp LEFT_ALT  &none  &kp LEFT_GUI    &kp F11    &kp ENTER  &kp KP_NUMBER_0                   &kp PERIOD       &none            &kp ESCAPE
+&to 0           &kp F2  &kp E         &kp R  &kp F5                                   &Msavetofav      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE
+&kp TAB         &kp S   &none         &none  &msc SCRL_DOWN                           &Msavetonotfav   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &mt MINUS ENTER
+&kp LEFT_SHIFT  &kp X   &kp C         &kp V  &msc SCRL_DOWN                           &to 6            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none
+&kp LCTRL       &none   &kp LEFT_ALT  &none  &kp LEFT_GUI    &kp PERIOD    &kp ENTER  &kp KP_NUMBER_0                   &kp PERIOD       &none            &kp ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp LC(LG(RIGHT)) LC(LG(LEFT))>;
