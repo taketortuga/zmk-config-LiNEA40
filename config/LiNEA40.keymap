@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -304,7 +304,7 @@
 &mt LCTRL TAB     &none  &kp LEFT_ALT  &none  &kp LEFT_GUI    &kp SPACE    &kp SPACE  &kp ENTER                         &none           &none            &kp ESCAPE
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(LG(RIGHT)) LC(LG(LEFT))>;
+            sensor-bindings = <&inc_dec_kp (LC(O)) LC(W)>;
         };
 
         WORK0102 {
