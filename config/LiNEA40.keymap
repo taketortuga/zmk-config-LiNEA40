@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -266,8 +266,8 @@
         COUSOR {
             bindings = <
 &bt BT_CLR    &kp F2          &kp F3  &kp F4  &kp F5                          &kp LC(HOME)  &kp HOME       &kp UP    &kp END      &kp DEL
-&bt BT_SEL 0  &none           &none   &MPW    &Mrvpn                          &kp LC(END)   &kp LEFT       &kp DOWN  &kp RIGHT    &kp ENTER
-&bt BT_SEL 1  &none           &none   &none   &Mbxo                           &none         &kp PAGE_DOWN  &none     &kp PAGE_UP  &none
+&bt BT_SEL 0  &none           &none   &MPW    &none                           &kp LC(END)   &kp LEFT       &kp DOWN  &kp RIGHT    &kp ENTER
+&bt BT_SEL 1  &none           &none   &none   &none                           &none         &kp PAGE_DOWN  &none     &kp PAGE_UP  &none
 &bt BT_SEL 2  &studio_unlock  &none   &none   &none   &kp SPACE    &kp SPACE  &mo 1                        &none     &none        &kp ESCAPE
             >;
 
