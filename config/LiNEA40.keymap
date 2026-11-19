@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -208,7 +208,11 @@
         Msavetofav: Msavetofav {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F4 &kp LC(A) &kp LS(D) &kp APOS &kp LA(INTERNATIONAL_3) &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp DOT &kp T &kp H &kp U &kp M &kp B &kp N &kp A &kp I &kp L &kp LA(INTERNATIONAL_3) &kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp DOT &kp M &kp O &kp V &kp E &kp T &kp O &kp F &kp A &kp V &kp ENTER>;
+            bindings =
+                <&kp F4 &kp LC(A) &kp LS(D) &kp APOS &kp LA(INTERNATIONAL_3) &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp DOT &kp T &kp H &kp U &kp M &kp B &kp N &kp A &kp I &kp L &kp LA(INTERNATIONAL_3) &kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp DOT &kp F &kp A &kp V &kp ENTER>,
+                <&macro_wait_time 600>,
+                <&kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &to 6>;
+
             label = "MSAVETOFAV";
         };
 
@@ -216,7 +220,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp F4 &kp LC(A) &kp LS(D) &kp APOS &kp LA(INTERNATIONAL_3) &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp PERIOD &kp T &kp H &kp U &kp M &kp B &kp N &kp A &kp I &kp L &kp LA(INTERNATIONAL_3) &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp DOT &kp M &kp O &kp V &kp E &kp T &kp O &kp A &kp R &kp C &kp ENTER>,
+                <&kp F4 &kp LC(A) &kp LS(D) &kp APOS &kp LA(INTERNATIONAL_3) &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp PERIOD &kp T &kp H &kp U &kp M &kp B &kp N &kp A &kp I &kp L &kp LA(INTERNATIONAL_3) &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp DOT &kp A &kp R &kp C &kp ENTER>,
                 <&macro_wait_time 600>,
                 <&macro_tap_time 200>,
                 <&kp LA(S) &to 6>;
@@ -238,13 +242,6 @@
             bindings = <&macro_tap_time 200>, <&kp LA(E) &kp B>, <&macro_press>;
 
             label = "MSETB";
-        };
-
-        Msave: Msave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &to 6>;
-            label = "MSAVE";
         };
     };
 
