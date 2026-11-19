@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -296,10 +296,10 @@
 
         WORK0101 {
             bindings = <
-&to 0             &kp W  &kp E         &kp R  &none                                   &kp PAGE_UP    &kp LEFT_BRACKET  &kp UP_ARROW    &kp RIGHT_BRACKET  &kp BACKSPACE
-&kp A             &kp S  &none         &none  &msc SCRL_UP                            &kp PAGE_DOWN  &kp LEFT          &kp DOWN_ARROW  &kp RIGHT          &kp ENTER
-&mt LEFT_SHIFT Z  &kp X  &kp C         &kp V  &msc SCRL_DOWN                          &to 7          &kp HOME          &mkp LCLK       &kp END            &none
-&mt LCTRL TAB     &none  &kp LEFT_ALT  &none  &kp LEFT_GUI    &kp SPACE    &kp SPACE  &kp ENTER                        &none           &none              &kp ESCAPE
+&to 0             &kp W  &kp E         &kp R  &none                                   &kp PAGE_UP    &kp RIGHT_BRACKET  &kp UP_ARROW    &kp NON_US_HASH  &kp BACKSPACE
+&kp A             &kp S  &none         &none  &msc SCRL_UP                            &kp PAGE_DOWN  &kp LEFT           &kp DOWN_ARROW  &kp RIGHT        &kp ENTER
+&mt LEFT_SHIFT Z  &kp X  &kp C         &kp V  &msc SCRL_DOWN                          &to 7          &kp HOME           &mkp LCLK       &kp END          &none
+&mt LCTRL TAB     &none  &kp LEFT_ALT  &none  &kp LEFT_GUI    &kp SPACE    &kp SPACE  &kp ENTER                         &none           &none            &kp ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp LC(LG(RIGHT)) LC(LG(LEFT))>;
