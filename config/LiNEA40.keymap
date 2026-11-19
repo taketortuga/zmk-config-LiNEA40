@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -212,7 +212,7 @@
                 <&kp F4 &kp LC(A) &kp LS(D) &kp APOS &kp LA(INTERNATIONAL_3) &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp DOT &kp T &kp H &kp U &kp M &kp B &kp N &kp A &kp I &kp L &kp LA(INTERNATIONAL_3) &kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp DOT &kp M &kp O &kp V &kp E &kp T &kp O &kp F &kp A &kp V &kp ENTER>,
                 <&macro_wait_time 600>,
                 <&macro_tap_time 200>,
-                <&kp LA(S) &to 6>;
+                <&kp ENTER &to 6>;
 
             label = "MSAVETOFAV";
         };
