@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -244,8 +244,8 @@
         LAYER01 {
             bindings = <
 &none           &none  &none  &none  &none                                      &kp F6                   &kp F7       &kp F8         &none   &kp DELETE
-&none           &none  &none  &MPW   &Mrvpn                                     &none                    &kp HOME     &kp END        &kp F9  &kp F10
-&kp LEFT_SHIFT  &none  &none  &none  &Mbxo                                      &none                    &kp PAGE_UP  &kp PAGE_DOWN  &none   &none
+&none           &none  &none  &MPW   &none                                      &none                    &kp HOME     &kp END        &kp F9  &kp F10
+&kp LEFT_SHIFT  &none  &none  &none  &none                                      &none                    &kp PAGE_UP  &kp PAGE_DOWN  &none   &none
 &kp RCTRL       &none  &none  &none  &kp GRAVE  &kp INT_HENKAN    &kp LEFT_ALT  &kp LANG_ZENKAKUHANKAKU               &to 5          &none   &bootloader
             >;
 
