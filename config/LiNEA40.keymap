@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -171,38 +171,6 @@
             label = "M01PW";
         };
 
-        Mrvpn: M02rvpn {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LEFT_GUI>,
-                <&macro_wait_time 800>,
-                <&kp TAB &kp TAB &kp DOWN_ARROW &kp RIGHT &kp RIGHT &kp ENTER>,
-                <&macro_wait_time 800>,
-                <&kp N1 &kp N0 &kp DOT &kp N1 &kp N8 &kp N9 &kp DOT &kp N2 &kp N1 &kp N4 &kp DOT &kp N1 &kp N5 &kp N5>,
-                <&macro_wait_time 400>,
-                <&kp LA(N)>,
-                <&macro_wait_time 1000>,
-                <&kp LA(N)>,
-                <&macro_wait_time 1000>,
-                <&kp R &kp V &kp P &kp N &kp BSLH &kp N4 &kp N0 &kp N8 &kp N0 &kp N5 &kp N5 &kp N3 &kp TAB &kp S &kp H &kp O &kp W &kp N2 &kp N4 &kp N5 &kp N6 &kp G &kp U &kp Y &kp ENTER>;
-
-            label = "M02RVPN";
-        };
-
-        Mbxo: M03bxo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LA(TAB)>,
-                <&macro_wait_time 200>,
-                <&kp LA(TAB)>,
-                <&macro_wait_time 200>,
-                <&kp B &kp X &kp O &kp BSLH &kp N4 &kp N0 &kp N8 &kp N0 &kp N5 &kp N5 &kp N3 &kp TAB &kp S &kp H &kp O &kp W &kp N2 &kp N4 &kp N5 &kp N6 &kp G &kp U &kp Y>;
-
-            label = "M03BXO";
-        };
-
         Msum: M04sum {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -240,7 +208,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp F4 &kp LC(A) &kp LS(D) &kp COLON &kp BSLH &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp DOT &kp T &kp H &kp U &kp M &kp B &kp N &kp A &kp I &kp L &kp BSLH &kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp DOT &kp M &kp O &kp V &kp E &kp T &kp O &kp F &kp A &kp V &kp ENTER &kp LA(S)>,
+                <&kp F4 &kp LC(A) &kp LS(D) &kp APOS &kp INT3 &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp DOT &kp T &kp H &kp U &kp M &kp B &kp N &kp A &kp I &kp L &kp INT3 &kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp DOT &kp M &kp O &kp V &kp E &kp T &kp O &kp F &kp A &kp V &kp ENTER &kp LA(S)>,
                 <&macro_wait_time 400>,
                 <&to 6>;
 
@@ -251,9 +219,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp F4 &kp LC(A) &kp LS(D) &kp COLON &kp BSLH &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp PERIOD &kp T &kp H &kp U &kp M &kp B &kp N &kp A &kp I &kp L &kp BSLH &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp DOT &kp M &kp O &kp V &kp E &kp T &kp O &kp A &kp R &kp C &kp H &kp I &kp V &kp E &kp ENTER &kp LA(S)>,
+                <&kp F4 &kp LC(A) &kp LS(D) &kp APOS &kp INT3 &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp PERIOD &kp T &kp H &kp U &kp M &kp B &kp N &kp A &kp I &kp L &kp INT3 &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp DOT &kp M &kp O &kp V &kp E &kp T &kp O &kp A &kp R &kp C &kp ENTER>,
                 <&macro_wait_time 400>,
-                <&to 6>;
+                <&kp LA(S) &to 6>;
 
             label = "MSAVETONOTFAV";
         };
