@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -197,11 +197,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LC(S)>,
-                <&macro_wait_time 800>,
-                <&kp END &kp DOT &kp E &kp D &kp I &kp T>,
                 <&macro_wait_time 400>,
-                <&to 7>;
+                <&kp LC(S) &kp END>,
+                <&macro_wait_time 15>,
+                <&kp DOT &kp E &kp D &kp I &kp T &to 7>;
 
             label = "M06SEDIT";
         };
@@ -226,6 +225,22 @@
                 <&kp LA(S) &to 6>;
 
             label = "MSAVETONOTFAV";
+        };
+
+        MsetA: MsetA {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_wait_time 200>, <&kp LA(E) &kp A>;
+
+            label = "MSETA";
+        };
+
+        MsetB: MsetB {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_wait_time 200>, <&kp LA(E) &kp B>;
+
+            label = "MSETB";
         };
     };
 
@@ -298,10 +313,10 @@
 
         WORK0101 {
             bindings = <
-&to 0             &kp W  &kp E         &kp R  &none                                   &kp PAGE_UP    &kp LC(PG_UP)  &kp UP_ARROW    &kp LC(PAGE_DOWN)  &kp BACKSPACE
-&kp A             &kp S  &none         &none  &msc SCRL_UP                            &kp PAGE_DOWN  &kp LEFT       &kp DOWN_ARROW  &kp RIGHT          &kp ENTER
-&mt LEFT_SHIFT Z  &kp X  &kp C         &kp V  &msc SCRL_DOWN                          &to 7          &kp HOME       &mkp LCLK       &kp END            &none
-&mt LCTRL TAB     &none  &kp LEFT_ALT  &none  &kp LEFT_GUI    &kp SPACE    &kp SPACE  &kp ENTER                     &none           &none              &kp ESCAPE
+&to 0             &kp W  &kp E         &kp R  &none                                   &kp PAGE_UP    &MsetA    &kp UP_ARROW    &MsetB     &kp BACKSPACE
+&kp A             &kp S  &none         &none  &msc SCRL_UP                            &kp PAGE_DOWN  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &kp ENTER
+&mt LEFT_SHIFT Z  &kp X  &kp C         &kp V  &msc SCRL_DOWN                          &to 7          &kp HOME  &mkp LCLK       &kp END    &none
+&mt LCTRL TAB     &none  &kp LEFT_ALT  &none  &kp LEFT_GUI    &kp SPACE    &kp SPACE  &kp ENTER                &none           &none      &kp ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp (LC(O)) LC(W)>;
