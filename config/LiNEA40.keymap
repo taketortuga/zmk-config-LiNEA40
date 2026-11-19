@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -197,7 +197,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LC(S) &kp LC(END) &kp E &kp D &kp I &kp T &kp DOT>,
+                <&kp LC(S)>,
+                <&macro_wait_time 400>,
+                <&kp LC(END) &kp DOT &kp E &kp D &kp I &kp T>,
                 <&macro_wait_time 400>,
                 <&to 7>;
 
